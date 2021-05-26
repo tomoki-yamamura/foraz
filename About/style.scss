@@ -19,15 +19,17 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    @include animation (
-      $name: kf-cover-slide,
-      $duration: 1.6s,
-      $timing-function: ease-in-out
-    );
+    opacity: 0;
   }
   &.inview {
-    &::after{
-
+   
+    &::after{ 
+      opacity: 1;
+      @include animation (
+        $name: kf-cover-slide,
+        $duration: 1.6s,
+        $timing-function: ease-in-out
+      );
     }
   }
 }

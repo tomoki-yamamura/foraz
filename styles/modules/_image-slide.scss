@@ -3,7 +3,6 @@
 .cover-slide {
   position: relative;
   overflow: hidden;
-  // margin-bottom: 80vh;
 
   &::after {
     content: "";
@@ -50,6 +49,8 @@
 
 .img-zoom {
   opacity: 0;
+  height: 300px;
+  width: 100%;
 
   .inview & {
     opacity: 1;

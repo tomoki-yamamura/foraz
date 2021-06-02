@@ -3,3 +3,40 @@
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+// .flex {
+//   flex-wrap: wrap;
+//   flex-direction: row;
+// }
+
+.flex{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.houses {
+  &__item {
+    flex-basis: 50%;
+    margin-bottom: 60px;
+  }
+}
+
+.popular {
+  position: relative;
+  &__container {
+    justify-content: space-between;
+  }
+  &__item {
+    flex-basis: 47%;
+  }
+}
+
+.travel {
+  &__texts,
+  &__img {
+    flex-basis: 47%;
+  }
+  &__texts {
+    display: flex;
+    align-items: flex-end;
+  }
+}

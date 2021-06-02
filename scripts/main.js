@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const hero = new HeroSlider('.swiper-container');
-    // hero.start();
+    hero.start();
 
 
     const cb = function (el, inview) {
@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const so = new ScrollObserver('.tween-animate-title', cb);
+
 
     const _inviewAnimation = function(el, inview) {
         if(inview) {

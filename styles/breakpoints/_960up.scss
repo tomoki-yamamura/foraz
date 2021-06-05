@@ -38,11 +38,28 @@ Stylesheet: 960px以上のモニタで適用
   }
 }
 
-.travel {
+.about {
   &__img{
     height: 400px;
   } 
   &__description {
     margin-bottom: 40px;
+  }
+  &__title {
+    &::before{
+      display: block;
+    }
+  }
+}
+
+.header{
+  &__nav{
+    display: block;
+  }
+}
+
+.mobile-menu{
+  &__btn {
+    display: none;
   }
 }

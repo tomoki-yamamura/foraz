@@ -8,6 +8,13 @@ body{
   font-family: 'Montserrat','Noto Sans JP', sans-serif;
 }
 
+#container {
+  transition: transform 0.5s, box-shadow 0.5s ;
+  background-color: $cWhite;
+  position: relative;
+  z-index: 10;
+}
+
 img {
   max-width: 100%;
   vertical-align: bottom;
@@ -53,6 +60,61 @@ img {
   max-width: $contentMaxWidth;
 }
 
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: $navHeight;
+  background-color:transparent;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+
+  &.triggered {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width;
+  }
+
+  &__nav{
+    display: none;
+  }
+  
+  &__ul{
+      display: flex;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      align-items: center;
+  }
+  
+  &__li{
+      margin-left: 20px;
+      & > a {
+        color: $cBlack;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+  }
+  & .logo{
+      justify-content: center;
+      font-size: 25px;
+  }
+  
+
+}
+
+#content {
+  padding-top: $navHeight;
+}
+
 .houses {
   @extend .content-width;
   &__title {
@@ -73,6 +135,7 @@ img {
   @extend .font-lg;
   font-weight: 600;
   margin-bottom: 0;
+  display: block;
 }
 
 .sub-title {
@@ -130,32 +193,102 @@ img {
 .purple {
   color: red;
 }
-.travel {
-  @extend .content-width;
 
+
+
+.about {
+  @extend .content-width;
   &__inner {
     @extend .flex;
     justify-content: space-between;
     padding: 15px;
     background-color: $cBgGray;
-    padding: 50px;
+    position: relative;
+    z-index: 0;
   }
-
   &__sub {
-    @extend .mb-sm;
+    @extend .mb-sm
   }
-
   &__img {
     height: 300px;
     @extend .mb-sm;
+    transition: box-shadow 1ms linear 1s;
+
     & > img {
       object-fit: cover;
       width: 100%;
       height: 100%;
+      position: relative;
+      z-index: -1;
+    }
+    &.inview {
+      box-shadow: inset 0 0 30px black;
     }
   }
   &__texts {
-    @extend .pb-sm
+    @extend .pb-sm;
+  }
+  &__title {
+    position: relative;
+    @include p-base($display: none, $width: 100px, $height: 1px, $top: 50%, $left: -120px){
+      background-color: black;
+      transform: translateY(-50%) scaleX(0);
+      transition: transform 0.3s ease 1.6s;
+      transform-origin: right;
+    }
+    &.inview{
+      &::before{
+        transform: translateY(-50%);
+      }
+    }
   }
 }
 
+.logo {
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  &__img{
+    width: 115px;
+    height: 80px;
+  }
+
+}
+
+.footer{
+  padding: 60px 0;
+  @extend .content-width;
+  &__nav{
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__ul{
+    @extend .flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__li{
+    padding: 0;
+    margin: 10px;
+    & > a {
+      color: $cBlack;
+      text-decoration:none;
+    }
+  }
+  & .logo{
+    justify-content: center;
+    font-size: 25px;
+  }
+}
+
+a {
+  transition: all 0.3s;
+  &:hover {
+    color: $cBgGray;
+  }
+}

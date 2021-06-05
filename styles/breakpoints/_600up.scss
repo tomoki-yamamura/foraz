@@ -30,13 +30,24 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   }
 }
 
-.travel {
+.about {
   &__texts,
   &__img {
     flex-basis: 47%;
   }
+
   &__texts {
     display: flex;
     align-items: flex-end;
   }
+  &__inner {
+    padding: 50px;
+  }
+}
+
+.footer{
+  & .logo{
+    justify-content: flex-start;
+  }
+  
 }

@@ -455,6 +455,7 @@
 
 .hero {
   overflow: hidden;
+  padding-top: 100px;
 }
 
 .hero__title {
@@ -1011,7 +1012,7 @@ img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg {
+.mb-lg, .houses, .popular__btn, .about {
   margin-bottom: 80px !important;
 }
 
@@ -1019,7 +1020,7 @@ img {
   padding-bottom: 16px !important;
 }
 
-.pb-lg {
+.pb-lg, .hero {
   padding-bottom: 80px !important;
 }
 
@@ -1094,10 +1095,6 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 25px;
-}
-
-#content {
-  padding-top: 100px;
 }
 
 .houses__btn {
@@ -1366,10 +1363,10 @@ Stylesheet: 960px以上のモニタで適用
   .font-lg, .main-title {
     font-size: 36px;
   }
-  .mb-lg {
+  .mb-lg, .houses, .popular__btn, .about {
     margin-bottom: 150px !important;
   }
-  .pb-lg {
+  .pb-lg, .hero {
     padding-bottom: 150px !important;
   }
   .popular__item {

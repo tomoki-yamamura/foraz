@@ -111,12 +111,12 @@ img {
 
 }
 
-#content {
-  padding-top: $navHeight;
-}
+
 
 .houses {
   @extend .content-width;
+  @extend .mb-lg;
+
   &__title {
     @extend .font-lr;
     @extend .mb-sm
@@ -176,6 +176,7 @@ img {
   &__btn {
     text-align: center;
     flex-basis: 100%;
+    @extend .mb-lg;
   }
   &__img {
     height: 150px;
@@ -198,6 +199,8 @@ img {
 
 .about {
   @extend .content-width;
+  @extend .mb-lg;
+
   &__inner {
     @extend .flex;
     justify-content: space-between;

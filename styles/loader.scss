@@ -27,14 +27,14 @@
   text-align: center;
 }
 
-.pace .pace-progress::after {
-  content: attr(data-progress-text);
-  display: block;
-  font-weight: 100;
-  font-size: 2em;
-  font-family: 'Helvetica Neue', 'Yu Gothic', 'Meiryo', sans-serif;
-  color: $cSubTitle;
-}
+// .pace .pace-progress::after {
+//   content: attr(data-progress-text);
+//   display: block;
+//   font-weight: 100;
+//   font-size: 2em;
+//   font-family: 'Helvetica Neue', 'Yu Gothic', 'Meiryo', sans-serif;
+//   color: $cSubTitle;
+// }
 
 .pace.pace-inactive {
   display: none;
@@ -43,14 +43,14 @@
 .pace-progress-inner {
   width: 40px;
   height: 40px;
-  background-color: blue;
+  background-color: yellow;
 
   border-radius: 100%;  
 
   margin: 0 auto;
   @include animation(
     $name: sk-scaleout,
-    $duration: 1.7s,
+    $duration: 1.2s,
     $iteration-count: infinite,
   );
 }
@@ -59,9 +59,13 @@
   0% { 
     transform: scale(0);
   } 
+  50% {
+    background-color: blue;
+  }
   100% {
-    transform: scale(1.0);
+    transform: scale(3.0);
     opacity: 0;
+    background-color: yellow;
   }
 }
 

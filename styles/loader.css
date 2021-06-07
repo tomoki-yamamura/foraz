@@ -26,15 +26,6 @@
   text-align: center;
 }
 
-.pace .pace-progress::after {
-  content: attr(data-progress-text);
-  display: block;
-  font-weight: 100;
-  font-size: 2em;
-  font-family: 'Helvetica Neue', 'Yu Gothic', 'Meiryo', sans-serif;
-  color: #535353;
-}
-
 .pace.pace-inactive {
   display: none;
 }
@@ -42,13 +33,13 @@
 .pace-progress-inner {
   width: 40px;
   height: 40px;
-  background-color: blue;
+  background-color: yellow;
   border-radius: 100%;
   margin: 0 auto;
   -webkit-animation-name: sk-scaleout;
           animation-name: sk-scaleout;
-  -webkit-animation-duration: 1.7s;
-          animation-duration: 1.7s;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-delay: 0s;
@@ -66,10 +57,14 @@
     -webkit-transform: scale(0);
             transform: scale(0);
   }
+  50% {
+    background-color: blue;
+  }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(3);
+            transform: scale(3);
     opacity: 0;
+    background-color: yellow;
   }
 }
 
@@ -78,10 +73,14 @@
     -webkit-transform: scale(0);
             transform: scale(0);
   }
+  50% {
+    background-color: blue;
+  }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(3);
+            transform: scale(3);
     opacity: 0;
+    background-color: yellow;
   }
 }
 /*# sourceMappingURL=loader.css.map */

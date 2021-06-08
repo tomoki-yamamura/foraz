@@ -1,13 +1,16 @@
 $cMenuClose: $cBlack;
 $cMenuOpen: $cBlack;
 
-
-
 .mobile-menu {
     position: fixed;
     right: 0;
     top: 60px;
     width: 300px;
+
+    & .logo {
+        padding: 0 40px;
+        font-size: 38px;
+    }
 
     &__btn {
         background-color: unset;
@@ -22,7 +25,6 @@ $cMenuOpen: $cBlack;
             display: block;
             margin-bottom: 9px;
             transition: transform 0.7s;
-
     
             &:last-child {
                 margin-bottom: 0;
@@ -40,6 +42,7 @@ $cMenuOpen: $cBlack;
         visibility: hidden;
         transition: opacity 1s;
         cursor: pointer;
+        z-index: 200;
     }
     &__main {
         padding: 0;
@@ -60,15 +63,11 @@ $cMenuOpen: $cBlack;
         color: $cBlack;
         text-decoration: none !important;
     }
-    & .logo {
-        padding: 0 40px;
-    }
-
 }
 
 .menu-open {
     & #container {
-        transform: translate(-300px, 0px);
+        transform: translate(-300px, 60px);
         box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
     }
     
@@ -76,7 +75,6 @@ $cMenuOpen: $cBlack;
         &__cover {
             opacity: 1;
             visibility: visible;
-            z-index: 200;
         }
         &__item {
             transform: none;
@@ -108,4 +106,3 @@ $cMenuOpen: $cBlack;
         }
     }
 }
-

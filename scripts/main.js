@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 class Main {
     constructor() {
-        this.header = document.querySelector('.header');
+        // this.header = document.querySelector('.header');
         this.sides = document.querySelectorAll('.side');
         this._observers = [];
         this._init();
@@ -78,7 +78,7 @@ class Main {
     }
 
     _scrollInit() {
-        this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false});
+        // this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false});
         this.observers = new ScrollObserver('.cover-slide', this._inviewAnimation);
         this.observers = new ScrollObserver('.appear', this._inviewAnimation);
         this.observers = new ScrollObserver('.tween-animate-title', this._textAnimation, {rootMargin: "-200px 0px"});

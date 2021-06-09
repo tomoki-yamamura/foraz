@@ -61,11 +61,11 @@ img {
 }
 
 #content {
-  padding-top: $navHeight;
+  // padding-top: $navHeight;
 }
 
 .header{
-  position: fixed;
+  // position: fixed;
   top:0;
   left:0;
   width: 100%;
@@ -75,10 +75,10 @@ img {
   align-items: center;
   z-index: 100;
 
-  &.triggered {
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
-  }
+  // &.triggered {
+  //   background-color: rgba(255, 255, 255, 0.9);
+  //   box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+  // }
 
   &__inner {
     display: flex;
@@ -159,7 +159,9 @@ img {
 .sub-title {
   @extend .font-sm;
   color: $cSubTitle;
+  // display: none;
 }
+
 .flex{
   display: flex;
   flex-direction: column;
@@ -308,7 +310,6 @@ img {
 }
 
 a {
-  transition: all 0.3s;
   &:hover {
     color: $cBgGray;
   }

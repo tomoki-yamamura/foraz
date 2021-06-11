@@ -132,6 +132,63 @@ img {
 
 .first {
   height: 480px;
+  &__title-p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $cBlack;
+    z-index: 3;
+    font-size: 3.8vw;
+  }
+  &__footer {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    padding-bottom: 125px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    transition: all .3s;
+    z-index: 3;
+    color: $cWhite;
+    
+
+    & > span {
+      transform: rotate(-90deg);
+      display: block;
+    }
+    &::after{
+      content: "";
+      width: 2px;
+      display: block;
+      top: 30%;
+      left: 50%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: $cWhite;
+      @include animation(
+        $name: lineMove,
+        $iteration-count: infinite,
+        $duration: 3.5s)
+    }
+  }
+
+  @keyframes lineMove {
+    0% {
+      top:30%;
+      bottom: 100%;
+    }
+    50% {
+      top: 30%;
+      bottom: 0;
+    }
+    100% {
+      top:100%;
+    }
+  }
+
   &__img{
     &:first-child {
       background-position: top;
@@ -153,25 +210,29 @@ h2{
   font-weight: 200;
   @extend .font-p;
 }
+#about{
+  @extend .content-width;
+}
 
 .about {
-  @extend .content-width;
+
   &-copy {
     font-size: 4.3vw;
     @extend .mb-sm;
     line-height: 2.0;
-
   }
 
   &-text {
     @extend .font-text;
     line-height: 2.5;
+    margin-bottom: 25px;
   }
 
   &-sec-right {
     // margin: 40px 0 0 -30px;
     position: relative;
     @extend .content-width;
+    margin: 0;
     &::before{
       content: "";
       display: block;
@@ -184,14 +245,28 @@ h2{
   }
 
   &-img01 {
+    transition: all 1s;
+    transform: translateY(10px);
+    opacity: 0;
+    &.inview {
+      transform: none;
+      opacity: 1;
+    }
     &-img {
-      width: 65%;
+      width: 75%;
     }
   }
   &-img02 {
     position: relative;
-    width: 50%;
+    width: 60%;
     // background-color: aquamarine;
+    transition: all 1s;
+    transform: translateY(10px);
+    opacity: 0;
+    &.inview {
+      opacity: 1;
+      transform: none;
+    }
     &::before {
       content: "";
       display: block;
@@ -201,7 +276,7 @@ h2{
     &-inner {
       position: absolute;
       top: -50%;
-      left: 100%;
+      left: 85%;
       width: 100%;
       height: 100%;
     }
@@ -333,6 +408,7 @@ h2{
 a {
   &:hover {
     color: $cBgGray;
+    text-decoration: none;
   }
 }
 

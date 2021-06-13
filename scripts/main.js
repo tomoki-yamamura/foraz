@@ -79,8 +79,8 @@ class Main {
 
     _scrollInit() {
         // this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false});
-        this.observers = new ScrollObserver('.cover-slide', this._inviewAnimation);
-        this.observers = new ScrollObserver('.appear', this._inviewAnimation);
+        // this.observers = new ScrollObserver('.cover-slide', this._inviewAnimation);
+        // this.observers = new ScrollObserver('.appear', this._inviewAnimation);
         this.observers = new ScrollObserver('.about-img01', this._inviewAnimation);
         this.observers = new ScrollObserver('.about-img02', this._inviewAnimation);
         this.observers = new ScrollObserver('.tween-animate-title', this._textAnimation, {rootMargin: "-200px 0px"});
